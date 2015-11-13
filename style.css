@@ -1,0 +1,104 @@
+body {color:#8BC43F;
+background-color:black;}
+
+html {
+	font-family:"Comic Sans MS", cursive, sans-serif;
+	
+}
+
+.hidden {display:none;}
+
+.wrapper {
+	width.85%;
+	margin:auto;
+}
+
+.search, .head {text-align:center;}
+
+.logo {max-width:600px;}
+
+p {text-align:center;
+font-size:1.4em;}
+
+.input {
+	padding:5px;
+	width:30%;
+	font-size:1.2em;
+	min-width:400px;
+}
+
+.submit {
+	font-weight:bold;
+	font-size:1.2em;
+	background-color: #8BC43F;
+	padding:5px 15px;
+	cursor:pointer;
+	border:none;
+}
+
+.results {width:60%;
+margin:auto;
+margin-top:5px;
+padding:15px;}
+
+.track {
+	margin-left:2rem;
+	padding:15px 0px;
+
+}
+
+.play::before {
+	content: '\ea1c';
+	font-size: 1rem;
+	line-height: 1rem;
+	padding-left: 2px;
+}
+
+.pause::before {
+	content: '\ea1d';
+	font-size: 1rem;
+	line-height: 1.2rem;
+	padding-left: 2px;
+}
+
+.track-info {
+	display: inline-block;
+}
+
+.track p {
+	display: inline-block;
+	margin: 0;
+}
+
+p.track-album-title {
+	display: block;
+}
+
+.track-album-art {
+	float: right;
+	position: relative;
+	bottom: 8px;
+}
+
+.btn-play {
+	background-color: #7CC646;
+	color: #FFFFFF;
+
+	font-family: 'icomoon';
+
+	border: 1px solid #7CC646;
+	border-radius: 50%;
+
+	height: 40px;
+	width: 40px;
+
+	margin-right: 25px;
+}
+
+.btn-play:focus {
+	outline: 0;
+}
+
+.btn-play:hover {
+	background-color: #A6CF88;
+}
