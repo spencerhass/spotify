@@ -21,31 +21,35 @@ p {text-align:center;
 font-size:1.4em;}
 
 .input {
+	float:left;
 	padding:5px;
 	width:30%;
 	font-size:1.2em;
 	min-width:400px;
+	margin-left: 30%;
 }
 
-.submit {
+.submit, 
+.submit-button {
+	color:black;
+	float:left;
 	font-weight:bold;
 	font-size:1.2em;
 	background-color: #8BC43F;
 	padding:5px 15px;
 	cursor:pointer;
 	border:none;
+	width:11%;
+	margin-left: 5px;
 }
+
 
 .results {width:60%;
 margin:auto;
 margin-top:5px;
 padding:15px;}
 
-.track {
-	margin-left:2rem;
-	padding:15px 0px;
 
-}
 
 .play::before {
 	content: '\ea1c';
@@ -101,4 +105,18 @@ p.track-album-title {
 
 .btn-play:hover {
 	background-color: #A6CF88;
+}
+
+ul {list-style-type: none}
+
+img{
+	max-width: 18rem;
+max-height: 15rem;
+margin-left: auto;
+margin-right: auto;
+}
+
+li {
+	display:inline-block;
+	margin-left:3px;
 }
