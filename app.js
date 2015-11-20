@@ -1,6 +1,11 @@
 $(document).ready(function() {
 	var audioObject = null;
+	
 	$('.submit-button').click( getArtistId );
+	$('form').submit(function(){
+		getArtistId();
+		return false;
+	})
 });
 
 function getArtistId(query) {
@@ -39,16 +44,30 @@ function getTopTracks(artistId) {
 
 function showResults( results )
 {
-	// console.log('results');
-	// console.log(results);
-	var newLineItem = '';
+	console.log('results');
+	console.log(results);
+	var newLineItem = '',
+			spotifyBaseUrl = 'https://open.spotify.com/embed?uri='; //works
+
+	
+	//remove all code from the results div (wrapper)
+	$('.results').html('');
+
+	//add code to the results div
 	for (var i = 0;  i < results.tracks.length; i++)
 	{
-		newLineItem += '<li><img src="'+ results.tracks[i]['album']['images'][0]['url'] +'" /></li>';
-		newLineItem += '<li>'+ results.tracks[i]['album']['name'] +'</li>';
-		newLineItem += '<li><a href="'+ results.tracks[i]['preview_url'] +'" target="_blank">'+ results.tracks[i]['name'] +'</a></li>';
+		newLineItem += '<div class="result">'
+		newLineItem += '<div class="play-button">'
+		newLineItem += 	'<iframe src="'+spotifyBaseUrl+results.tracks[i]['uri']+'" height="100" width="100" frameborder="0" allowtransparency="true"></iframe>'
+		newLineItem += '</div>'
+    newLineItem += '<div class="content">'
+    newLineItem +=   '<a class="artist" target="_blank" href="'+results.tracks[i]['artists'][0]['external_urls']['spotify']+'">'+results.tracks[i]['artists'][0]['name']+'</a><br>'
+    newLineItem +=   results.tracks[i]['album']['name'] +'<br>' + results.tracks[i]['name']
+    newLineItem += '</div>'
+    //newLineItem += '<div class="cover"><img src="'+results.tracks[i]['album']['images'][0]['url']+'" /></div>'
+    newLineItem += '</div>'
 	}
-	$('.results ul').append( newLineItem )
+	$('.results').append( newLineItem )
 
 
 }

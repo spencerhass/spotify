@@ -44,10 +44,11 @@ font-size:1.4em;}
 }
 
 
-.results {width:60%;
-margin:auto;
-margin-top:5px;
-padding:15px;}
+.results {
+	width:50%;
+	margin:auto;
+	margin-top:5px;
+	padding:15px;}
 
 
 
@@ -120,3 +121,21 @@ li {
 	display:inline-block;
 	margin-left:3px;
 }
+
+
+/* Album and Artist Information */
+.results{ 
+	border:1px dashed gray;
+}
+.result{
+	border-bottom:1px solid gray;
+	margin-bottom:15px;
+	padding-bottom:10px;
+	overflow:hidden;
+}
+.result div{ float:left; }
+
+.result .content{ margin: 0 30px; text-align:left; }
+
+.result .cover{ float:right; }
+.cover img{ width:100px; }
